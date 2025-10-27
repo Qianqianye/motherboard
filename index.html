@@ -24,7 +24,6 @@
         background: rgba(255, 255, 255, 0.9);
         padding: 12px 18px;
         border-radius: 25px;
-        /*                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
         backdrop-filter: blur(10px);
         font-size: 12px;
         color: #666;
@@ -38,35 +37,63 @@
         background: rgba(255, 255, 255, 0.9);
         padding: 12px 18px;
         border-radius: 15px;
-        /*                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
         backdrop-filter: blur(10px);
         font-size: 12px;
         color: #666;
         min-width: 150px;
       }
 
+      /*       #hormone-info {
+        position: absolute;
+        z-index: 200;
+        background: rgba(255, 255, 255, 0.92);
+        color: #333;
+        padding: 40px;
+        border-radius: 25px;
+        backdrop-filter: blur(20px);
+        font-size: 18px;
+        line-height: 1.6;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transform: scale(0.95);
+      }
+
+      #hormone-info.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+      }
+
+      #hormone-info h3 {
+        margin: 0 0 15px 0;
+        color: #222;
+        font-size: 22px;
+        font-weight: 400;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      }
+
+      #hormone-info p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #444;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+      } */
+
       #hormone-info {
         position: absolute;
         z-index: 200;
-        background: rgba(255, 0.7);
-        /*           background:
-                    radial-gradient(circle at 20% 30%, rgba(255, 107, 107, 0.25) 0%, transparent 35%),
-                    radial-gradient(circle at 70% 20%, rgba(74, 144, 226, 0.22) 0%, transparent 40%),
-                    radial-gradient(circle at 80% 60%, rgba(255, 142, 83, 0.28) 0%, transparent 30%),
-                    radial-gradient(circle at 30% 80%, rgba(196, 69, 105, 0.24) 0%, transparent 45%),
-                    radial-gradient(circle at 60% 70%, rgba(26, 188, 156, 0.26) 0%, transparent 35%),
-                    radial-gradient(circle at 10% 60%, rgba(155, 89, 182, 0.23) 0%, transparent 38%),
-                    radial-gradient(circle at 90% 40%, rgba(241, 196, 15, 0.21) 0%, transparent 32%),
-                    radial-gradient(circle at 45% 10%, rgba(46, 204, 113, 0.25) 0%, transparent 40%),
-                    rgba(255, 255, 255, 0.92); */
-
+        background: rgba(255, 0.94);
         color: #333;
         padding: 40px;
         border-radius: 25px;
         /*           box-shadow:
                     0 25px 80px rgba(0, 0, 0, 0.15),
                     inset 0 1px 0 rgba(255, 255, 255, 0.9); */
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(25px);
         font-size: 18px;
         line-height: 1.6;
         opacity: 0;
@@ -130,25 +157,60 @@
     <script>
       const poeticTexts = [
         "The Way You Laugh Makes Me Want To Be Funnier",
-        "The Way You Listen Makes Me Want To Have Something To Say",
-        "I Am A Collection Of Texts That I Never Sent",
-        "I Am A Collection Of Things That I Never Told You",
-        "I Vanish In The Pause Before Your First Word",
-        "My Thoughts Have Thoughts About Having Thoughts",
-        "I Am Getting Better At Being Here",
+        "I Save Your Laughter In The Back Of My Throat For Hard Days",
         "I Want To Know What You Think About At 3 AM",
         "I Am Both Too Much And Not Enough",
-        "I Rehearse Being Spontaneous",
-        "You Are The Comma In My Run-On Sentence",
-        "I Live In The Space Between Wanting And Never Asking",
         "I Wonder What My Voice Sounds Like To You",
+        "You Are The Comma In My Run-On Sentence",
+        "I Am Teaching You Things I'm Still Learning From My Mother",
+        "Your Fever Feels Like Fire In My Own Bones",
+        "I Call My Mother With You More Often Now That I Know What Worry Weighs",
+        "I Am Rewriting My Childhood Stories With Gentler Endings",
+        "I Am Learning To Mother Myself While Mothering You",
+        "I Talk To You In My Head Even When You're Right Here",
+        "My Hands Look More Like My Mother's Each Morning",
         "You Are Here and That Is Enough",
         "Adults Are Just Trying Not to Spill",
-        "You Are Here and That Is Enough",
         "A Cloud Sat on My Head and I Let It",
         "We Are Both New Here Learning This Together",
         "Your Dreams Visit Me Before They Visit You",
-        "I Keep My Feelings Folded in Small Pockets",
+        "I Keep My Feelings About You Folded in Small Pockets",
+        "I Vanish In The Pause Before Your First Word",
+        "The Way You Listen Makes Me Want To Have Something To Say",
+        "I Am Getting Better At Being Here",
+        "Your Heartbeat Still Sounds Like It's Inside My Body",
+        "The Way You Reach For Me In The Dark Undoes All My Careful Life Planning",
+        "I Collect Your Mispronounced Words Like Precious Stones",
+        "I Am Learning That Patience Is Just Love Moving Slowly",
+        "Your Smallness Makes Me Feel Both Giant And Invisible",
+        "The Weight Of You In My Arms Is The Lightest Heavy Thing",
+        "I Keep Trying To Remember What I Worried About Before You",
+        "Your Breathing At Night Is The Only Clock That Matters",
+        "I Finally Understand Why My Mother Couldn't Explain It Either",
+        "The Way You Say 'Mama' Feels Like Coming Home To A Place I've Never Been",
+        "My Mother's Worries Finally Make Sense In My Own Bones",
+        "The Way You Believe In Me Makes Me Want To Believe In Myself",
+        "The Way You Fall Asleep On Me Feels Like Absolute Trust Weighs Nothing",
+        "I Record Your Voice Because I'm Afraid Of Forgetting This Version",
+        "My Mother Knew This Ache And Never Warned Me It Would Feel Like Joy",
+        "I Keep A Museum Of Your Outgrown Clothes In My Closet",
+        "I Am Both The Shield And The Thing That Needs Protecting",
+        "Your Bad Dreams Pull Me From Sleep Before You Even Cry Out",
+        "I Finally Know Why My Mother Kept Every Card I Ever Made",
+        "The Way You Steal My Pillow Feels Like The Sweetest Robbery",
+        "Your Giggles In The Next Room Are My Favorite Interruption",
+        "I Keep My Mother's Voice In The Way I Say 'Be Careful'",
+        "Your Collections Of Rocks And Sticks Make More Sense Than Most Things",
+        "I Am Made Of All The Maybes I Turned Into Yeses For You",
+        "I Wonder If Creating You Counts As My Greatest Piece Or My Greatest Pause",
+        "I Am Both Artist And Muse And Neither And Someone I Don't Recognize",
+        "I Wonder If My Mother Also Forgot Who She Was For A While",
+        "I Keep Waiting For Inspiration While You Are The Inspiration",
+        "Your Fingerprints On My Monitor Are The Only Mark I'm Making Today",
+        "I Keep Opening New Tabs While You Close All My Windows",
+        "The Way You Reach For My Mouse Makes Me Question What I'm Clicking Toward",
+        "Your Grip On My Charger Cable Unplugs More Than My Laptop",
+        "I Am Both Online And Completely Unreachable",
       ];
 
       let words = [];
@@ -164,124 +226,279 @@
       // Hormone facts mapped to sentence themes
       const hormoneFacts = [
         {
-          // "The Way You Laugh Makes Me Want To Be Funnier"
           hormone: "Oxytocin + Dopamine",
           description:
             "The 'love cocktail.' Oxytocin floods the maternal brain during skin-to-skin contact, while dopamine creates reward pathways that make caregiving addictive. Together, they hijack the pleasure system to prioritize infant needs over self-preservation.",
         },
         {
-          // "The Way You Listen Makes Me Want To Have Something To Say"
-          hormone: "Prolactin + Cortisol",
+          hormone: "Dopamine + Memory Consolidation Proteins",
           description:
-            "The hypervigilance duo. Prolactin heightens auditory processing for infant cues while cortisol keeps mothers in a state of productive stress. This combination creates 'maternal radar' - the ability to hear a baby's cry through any noise.",
+            "The joy archive system. Dopamine spikes during moments of infant laughter trigger immediate memory consolidation, creating permanent neural imprints. These 'emotional bookmarks' can be retrieved during stress, releasing stored dopamine like a time-capsule of comfort.",
         },
         {
-          // "I Am A Collection Of Texts That I Never Sent"
-          hormone: "Progesterone + GABA",
-          description:
-            "The silencing system. High progesterone during pregnancy enhances GABA activity, creating a natural tranquilizer effect. This neurochemical dampening protects the developing fetus from maternal stress but often leaves mothers feeling disconnected from their own thoughts.",
-        },
-        {
-          // "I Am A Collection Of Things That I Never Told You"
-          hormone: "Estradiol + Serotonin",
-          description:
-            "The memory reorganizer. Estradiol surges create new neural pathways while serotonin fluctuations affect emotional recall. Maternal brains literally restructure to prioritize infant-related memories, sometimes at the cost of pre-pregnancy identity formation.",
-        },
-        {
-          // "I Vanish In The Pause Before Your First Word"
-          hormone: "hCG + Thyroid Hormones",
-          description:
-            "The metabolic hijack. hCG redirects thyroid function to support fetal development, often leaving mothers in a state of cognitive suspension. This creates the 'pregnancy pause' - moments where maternal consciousness temporarily dissolves to preserve fetal resources.",
-        },
-        {
-          // "My Thoughts Have Thoughts About Having Thoughts"
-          hormone: "Neurosteroids + Allopregnanolone",
-          description:
-            "The meta-cognitive amplifiers. These pregnancy-specific neurosteroids increase neural connectivity while creating recursive thought patterns. The maternal brain develops 'protective rumination' - constantly analyzing potential threats to offspring through multiple cognitive layers.",
-        },
-        {
-          // "I Am Getting Better At Being Here"
-          hormone: "Relaxin + Endorphins",
-          description:
-            "The presence enhancers. Relaxin loosens physical boundaries while endorphins create a natural high during maternal bonding. This combination anchors mothers in the present moment, making 'now' feel more real and important than past or future concerns.",
-        },
-        {
-          // "I Want To Know What You Think About At 3 AM"
           hormone: "Melatonin Suppression + Prolactin",
           description:
             "The sleep sacrifice system. Prolactin actively suppresses melatonin production, keeping mothers alert during traditional sleep hours. This creates 'night consciousness' - a hyperaware state designed to monitor infant breathing and movements in darkness.",
         },
         {
-          // "I Am Both Too Much And Not Enough"
           hormone: "Progesterone Withdrawal + Estrogen Dominance",
           description:
             "The postpartum paradox. Rapid hormonal shifts after birth create contradictory neurochemical signals. The brain simultaneously craves more stimulation (estrogen) while becoming overwhelmed by existing input (progesterone crash), creating impossible emotional standards.",
         },
         {
-          // "I Rehearse Being Spontaneous"
-          hormone: "Adrenaline + Acetylcholine",
-          description:
-            "The anticipatory alertness system. Chronic low-level adrenaline paired with acetylcholine creates 'predictive parenting' - constantly rehearsing responses to potential infant needs. Spontaneity becomes a calculated performance within carefully prepared parameters.",
-        },
-        {
-          // "You Are The Comma In My Run-On Sentence"
-          hormone: "Vasopressin + Oxytocin",
-          description:
-            "The attachment restructuring team. Vasopressin creates territorial bonding while oxytocin builds emotional connection. Together, they rewrite the maternal narrative structure, making the child the central punctuation that gives meaning to all other life experiences.",
-        },
-        {
-          // "I Live In The Space Between Wanting And Never Asking"
-          hormone: "Leptin Resistance + Ghrelin Suppression",
-          description:
-            "The self-denial programming. Maternal brains develop resistance to satiety signals (leptin) while suppressing hunger cues (ghrelin) when resources are scarce. This creates 'sacrificial appetite' - always ensuring others are fed before acknowledging personal needs.",
-        },
-        {
-          // "I Wonder What My Voice Sounds Like To You"
           hormone: "Estrogen + Vocal Cord Steroids",
           description:
             "The communication transformer. Hormonal changes literally alter vocal cord thickness and resonance. Mothers unconsciously modulate their voice frequency to match infant auditory preferences, often losing recognition of their own authentic speaking tone.",
         },
         {
-          // "You Are Here and That Is Enough"
+          hormone: "Vasopressin + Oxytocin",
+          description:
+            "The attachment restructuring team. Vasopressin creates territorial bonding while oxytocin builds emotional connection. Together, they rewrite the maternal narrative structure, making the child the central punctuation that gives meaning to all other life experiences.",
+        },
+        {
+          hormone: "Mirror Neuron Activation + Oxytocin",
+          description:
+            "The intergenerational transmission system. Oxytocin enhances mirror neuron sensitivity, creating real-time replication of learned maternal behaviors. Mothers unconsciously transmit their own mothers' gestures, tones, and comfort patterns while simultaneously revising them.",
+        },
+        {
+          hormone: "Cortisol Synchronization + Inflammatory Cytokines",
+          description:
+            "The empathic illness response. Maternal cortisol levels mirror infant stress hormones through pheromone detection. When a child is sick, mothers experience 'sympathetic inflammation' - actual immune responses triggered by proximity to infant distress signals.",
+        },
+        {
+          hormone: "Corticotropin-Releasing Hormone + Oxytocin",
+          description:
+            "The generational empathy bridge. CRH creates the physical sensation of worry - that specific chest tightness and vigilance. When experienced firsthand, it triggers oxytocin-driven reconnection with one's own mother, creating retroactive understanding across generations.",
+        },
+        {
+          hormone: "Neuroplasticity Factors + Serotonin Modulation",
+          description:
+            "The narrative revision system. Motherhood triggers unprecedented hippocampal plasticity, allowing actual restructuring of autobiographical memories. Increased serotonin during caregiving moments can literally recontextualize painful childhood memories with new emotional valence.",
+        },
+        {
+          hormone: "Self-Directed Oxytocin + Parasympathetic Activation",
+          description:
+            "The dual nurture circuit. The act of comforting an infant activates 'spillover oxytocin' that can be redirected inward. Maternal brains develop the capacity for self-soothing through the same neurochemical pathways used for infant care, creating parallel healing.",
+        },
+        {
+          hormone: "Default Mode Network Hyperactivity + Oxytocin",
+          description:
+            "The perpetual connection loop. Oxytocin keeps infant-related neural networks constantly active, even during rest. Mothers develop a 'dual consciousness' - maintaining internal dialogue with the child representation while engaging with the physical child simultaneously.",
+        },
+        {
+          hormone: "Estrogen + Collagen Remodeling Factors",
+          description:
+            "The generational morphology signal. Pregnancy and breastfeeding estrogen patterns trigger collagen restructuring that mirrors genetic maternal lineage. Hand shape, skin texture, and even gesture patterns physically manifest inherited maternal characteristics previously dormant.",
+        },
+        {
           hormone: "Endocannabinoids + Oxytocin",
           description:
             "The contentment cascade. The maternal brain produces natural cannabis-like compounds during bonding moments, enhanced by oxytocin release. This creates 'sufficient euphoria' - a biochemical state where simple presence feels like complete fulfillment.",
         },
         {
-          // "Adults Are Just Trying Not to Spill"
           hormone: "hCG + Insulin Resistance",
           description:
             "The coordination disruption. hCG alters glucose metabolism, creating temporary insulin resistance that affects fine motor control. 'Pregnancy clumsiness' is actually metabolic protection - the body prioritizes fetal glucose needs over maternal dexterity.",
         },
         {
-          // "You Are Here and That Is Enough" (duplicate)
-          hormone: "Beta-Endorphins + Prolactin",
-          description:
-            "The reward simplification system. These hormones create powerful positive reinforcement for basic caregiving acts. Complex achievement needs are replaced by simple presence-based satisfaction, making 'enough' feel genuinely abundant rather than settling.",
-        },
-        {
-          // "A Cloud Sat on My Head and I Let It"
           hormone: "Allopregnanolone + GABA Enhancement",
           description:
             "The acceptance amplifier. This neurosteroid enhances GABA receptors, creating a state of passive receptivity. The maternal brain develops 'surrender capacity' - biochemically rewarding acceptance of circumstances rather than resistance or control attempts.",
         },
         {
-          // "We Are Both New Here Learning This Together"
           hormone: "BDNF + Neuroplasticity Factors",
           description:
             "The mutual adaptation protocol. Brain-derived neurotrophic factor surges during early motherhood, creating unprecedented neural flexibility. Both mother and infant brains literally grow new connections simultaneously, making learning a shared neurochemical experience.",
         },
         {
-          // "Your Dreams Visit Me Before They Visit You"
           hormone: "REM Suppression + Hypnagogic Hormones",
           description:
             "The dream sharing system. Maternal brains spend more time in light sleep stages while producing hypnagogic hormones that increase dream vividness. This creates 'predictive dreaming' - unconsciously processing potential infant needs before they manifest.",
         },
         {
-          // "I Keep My Feelings Folded in Small Pockets"
           hormone: "Cortisol Binding + Emotional Suppression",
           description:
             "The compartmentalization chemistry. Stress hormones become bound to specific proteins, creating 'emotional storage' rather than immediate processing. Maternal brains develop biochemical filing systems to preserve overwhelming feelings until safe processing time becomes available.",
+        },
+        {
+          hormone: "hCG + Thyroid Hormones",
+          description:
+            "The metabolic hijack. hCG redirects thyroid function to support fetal development, often leaving mothers in a state of cognitive suspension. This creates the 'pregnancy pause' - moments where maternal consciousness temporarily dissolves to preserve fetal resources.",
+        },
+        {
+          hormone: "Prolactin + Cortisol",
+          description:
+            "The hypervigilance duo. Prolactin heightens auditory processing for infant cues while cortisol keeps mothers in a state of productive stress. This combination creates 'maternal radar' - the ability to hear a baby's cry through any noise.",
+        },
+        {
+          hormone: "Relaxin + Endorphins",
+          description:
+            "The presence enhancers. Relaxin loosens physical boundaries while endorphins create a natural high during maternal bonding. This combination anchors mothers in the present moment, making 'now' feel more real and important than past or future concerns.",
+        },
+        {
+          hormone: "Auditory Cortex Plasticity + Oxytocin Memory",
+          description:
+            "The phantom rhythm syndrome. Nine months of constant fetal heartbeat exposure creates permanent auditory templates in the maternal brain. Even after birth, mothers unconsciously search for this rhythm, creating the sensation that the child's heartbeat still resonates internally.",
+        },
+        {
+          hormone: "Vasopressin + Prefrontal Cortex Suppression",
+          description:
+            "The priority override system. Vasopressin-driven attachment temporarily suppresses prefrontal executive function during moments of infant need. This neurochemical 'emergency broadcast' makes pre-existing life plans feel suddenly irrelevant, rewriting long-term goal hierarchies instantly.",
+        },
+        {
+          hormone: "Dopamine + Episodic Memory Enhancement",
+          description:
+            "The linguistic treasure system. Dopamine surges during language development moments create hyper-vivid episodic memories. The maternal brain treats each unique mispronunciation as a reward event, triggering the same neural pathways activated by collecting valuable objects.",
+        },
+        {
+          hormone: "Serotonin Regulation + Prefrontal GABA",
+          description:
+            "The tempo modulation system. Increased prefrontal GABA activity slows cognitive processing while serotonin creates emotional stability. This combination literally changes the subjective experience of time passage, making 'slow' feel like an active choice rather than constraint.",
+        },
+        {
+          hormone: "Growth Hormone + Prolactin Paradox",
+          description:
+            "The scale distortion effect. Prolactin enhances physical awareness of size difference while simultaneously triggering 'maternal erasure' - the neurochemical suppression of personal needs. Mothers experience contradictory sensations of physical dominance and social disappearance.",
+        },
+        {
+          hormone: "Endorphins + Proprioceptive Recalibration",
+          description:
+            "The paradoxical load system. Endorphins released during infant holding create analgesic effects that mask physical strain. Simultaneously, proprioceptive neurons recalibrate to register infant weight as 'baseline,' making their absence feel heavier than their presence.",
+        },
+        {
+          hormone: "Cortisol Threshold Resetting + Memory Suppression",
+          description:
+            "The concern hierarchy overwrite. Maternal cortisol systems reset their activation thresholds, making pre-baby stressors chemically insufficient to trigger response. Previous worries become literally unmemorable - not forgotten, but neurochemically reclassified as insignificant.",
+        },
+        {
+          hormone: "Circadian Rhythm Disruption + Auditory Entrainment",
+          description:
+            "The temporal synchronization override. Infant breathing patterns become the dominant zeitgeber, overriding natural circadian rhythms. The maternal brain's time-keeping mechanisms literally recalibrate to infant respiratory cycles, making conventional time measurement feel arbitrary.",
+        },
+        {
+          hormone: "Oxytocin + Broca's Area Suppression",
+          description:
+            "The ineffable experience mechanism. Oxytocin surges during intense bonding moments temporarily suppress language production centers. This creates genuinely inexpressible experiences - not metaphorically beyond words, but neurochemically incompatible with verbal processing.",
+        },
+        {
+          hormone: "Dopamine + Hippocampal Novelty Detection",
+          description:
+            "The paradoxical familiarity system. The word 'Mama' triggers simultaneously novel reward (dopamine) and deep recognition (hippocampal activation). This creates the impossible sensation of nostalgic discovery - chemically experiencing both first-time wonder and ancient belonging.",
+        },
+        {
+          hormone: "Epigenetic Stress Markers + Somatic Memory",
+          description:
+            "The inherited anxiety embodiment. Stress patterns can be passed through epigenetic markers, creating literal bone-level calcium metabolism changes. When activated by motherhood, these inherited patterns create physical sensations of 'knowing' ancestral worries through body memory.",
+        },
+        {
+          hormone: "Reflected Appraisal Dopamine + Self-Efficacy Hormones",
+          description:
+            "The mirror confidence system. Infant trust triggers dopamine release that strengthens self-efficacy neural pathways. This creates a biochemical feedback loop where perceived belief from the child actually restructures maternal self-concept at the neurochemical level.",
+        },
+        {
+          hormone: "Oxytocin + Endogenous Opioids",
+          description:
+            "The trust-weight dissolution. The specific combination of infant body relaxation and proximity triggers massive opioid release that creates actual analgesia. Perceived weight literally decreases through neurochemical processing, making trust feel like a lightening rather than burden.",
+        },
+        {
+          hormone: "Amygdala Hyperactivation + Temporal Awareness",
+          description:
+            "The impermanence anxiety system. Heightened amygdala activity during rapid child development creates acute awareness of time's passage. This generates 'preservation panic' - a chemically-driven compulsion to document, driven by the brain's over-detection of change signals.",
+        },
+        {
+          hormone: "Pain-Pleasure Neural Overlap + Oxytocin",
+          description:
+            "The bittersweet fusion mechanism. Maternal experiences activate overlapping neural regions for pain and pleasure, with oxytocin binding to both pathways. This creates genuinely mixed emotions at the receptor level - not ambivalence, but simultaneous contradictory neurochemical states.",
+        },
+        {
+          hormone: "Olfactory Memory + Oxytocin Encoding",
+          description:
+            "The scent-locked time capsule system. Infant scent molecules bind with oxytocin receptors to create exceptionally strong memory encoding. Clothing becomes olfactory memory storage, capable of triggering complete experiential recall through retained scent particles.",
+        },
+        {
+          hormone: "Cortisol + Vulnerability Hormones",
+          description:
+            "The simultaneous exposure paradox. Motherhood creates dual cortisol pathways - one for protective hypervigilance, another for attachment vulnerability. The brain maintains contradictory threat assessments simultaneously, experiencing both invincibility and fragility as concurrent neurochemical realities.",
+        },
+        {
+          hormone: "Prolactin Vigilance + Predictive Cortisol",
+          description:
+            "The precognitive stress response. Prolactin maintains constant low-level monitoring that detects infant distress through micro-movements and breathing changes. Cortisol releases begin before conscious awareness, pulling mothers from sleep through hormonal alarm systems rather than sound.",
+        },
+        {
+          hormone: "Dopamine Reward + Sentimental Object Attachment",
+          description:
+            "The artifact bonding chemistry. Child-created objects trigger dopamine release equivalent to direct interaction. The maternal brain forms oxytocin-mediated attachments to physical items as proxy-children, making disposal feel neurochemically identical to separation distress.",
+        },
+        {
+          hormone: "Oxytocin + Reward System Override",
+          description:
+            "The theft-as-gift recoding. Oxytocin flood during infant boundary-crossing behavior creates dopamine release rather than stress response. The brain literally processes loss of personal resources as reward when the 'thief' is the child, reversing normal possession neurochemistry.",
+        },
+        {
+          hormone: "Auditory Reward Pathways + Dopamine Priority",
+          description:
+            "The sound hierarchy override. Child laughter activates reward centers more strongly than any other auditory input, including music or language. This creates neurochemical interruption-seeking - the brain actively monitors for and prioritizes infant joy sounds above task-oriented focus.",
+        },
+        {
+          hormone: "Motor Pattern Inheritance + Stress Vocalization",
+          description:
+            "The vocal lineage transmission. Stress-related phrases activate motor programs inherited through observation and encoded during one's own childhood. The exact pitch, rhythm, and prosody of maternal warnings are reproduced through unconscious motor memory, creating literal voice inheritance.",
+        },
+        {
+          hormone: "Cognitive Flexibility Hormones + Value Reassessment",
+          description:
+            "The meaning recalibration system. Motherhood triggers prefrontal plasticity that allows genuine revaluation of object significance. What appears as indulgence is actually neurochemical restructuring - the brain developing capacity to perceive value through child-cognitive frameworks.",
+        },
+        {
+          hormone: "Decision-Making Dopamine + Commitment Hormones",
+          description:
+            "The choice accumulation effect. Each child-directed 'yes' releases small dopamine rewards that accumulate into identity-level neural patterns. The maternal brain literally constructs new self-concept from aggregated micro-decisions, making selfhood a stack of child-oriented choices.",
+        },
+        {
+          hormone: "Creative Cortex Reorganization + Prolactin",
+          description:
+            "The artistic identity paradox. Pregnancy and nursing hormones literally reorganize creative processing centers, redirecting generative capacity toward child-creation. The brain experiences genuine confusion about creative output classification - is biological creation art, or art's interruption?",
+        },
+        {
+          hormone: "Identity Dissolution Hormones + Neuroplasticity",
+          description:
+            "The self-concept fragmentation system. Rapid neural restructuring creates simultaneous activation of multiple identity frameworks without hierarchical organization. The brain loses its 'primary self' designation, experiencing all possible identities as equally valid and invalid simultaneously.",
+        },
+        {
+          hormone: "Generational Memory Hormones + Empathy Networks",
+          description:
+            "The retroactive understanding mechanism. Current identity dissolution triggers mirror neuron activation for maternal ancestor experiences. This creates neurochemical 'time travel' - actually feeling historical maternal experiences through present hormonal state matching.",
+        },
+        {
+          hormone: "Dopamine Seeking + Attention Redirection",
+          description:
+            "The misdirected muse syndrome. Maternal brains develop split dopamine pathways - one seeking traditional creative inspiration, another constantly triggered by child presence. This creates the paradox of fulfilled yet unrecognized inspiration, searching externally for what's continuously present.",
+        },
+        {
+          hormone: "Achievement Hormone Suppression + Oxytocin Override",
+          description:
+            "The productivity redefinition chemistry. Child-care hormones suppress traditional achievement dopamine pathways while amplifying oxytocin rewards for presence. The brain recategorizes 'marks made' from output to interaction, making child traces feel like accomplishment.",
+        },
+        {
+          hormone: "Attention Fragmentation + Interruption Cortisol",
+          description:
+            "The focus competition mechanism. Maternal vigilance hormones create constant background monitoring that manifests as tab-opening behavior. Simultaneously, child presence triggers attention override protocols that force window-closing, creating neurochemical multitasking impossibility.",
+        },
+        {
+          hormone: "Goal Reassessment Hormones + Existential Cortisol",
+          description:
+            "The purpose interruption system. Physical intervention in goal-directed behavior triggers prefrontal reassessment cascades. Child interruption of technology use specifically activates meaning-evaluation centers, making simple actions suddenly feel philosophically questionable.",
+        },
+        {
+          hormone: "Metaphorical Processing + Connection Anxiety",
+          description:
+            "The symbolic disconnection response. Child interference with power sources triggers limbic metaphor centers that process literal and emotional disconnection simultaneously. The brain experiences technical interruption as existential unplugging - severing multiple connection types at once.",
+        },
+        {
+          hormone: "Presence Paradox Hormones + Dissociation Factors",
+          description:
+            "The availability contradiction system. Maternal brains maintain simultaneous states of digital connectivity and emotional unavailability through compartmentalized cortisol responses. This creates biochemical split-presence - chemically present in two incompatible realities without integration.",
         },
       ];
 
@@ -340,7 +557,6 @@
         },
       };
 
-      // Simple sentiment analysis as fallback
       function simpleSentimentAnalysis(text) {
         const positiveWords = [
           "love",
@@ -366,6 +582,11 @@
           "enough",
           "better",
           "here",
+          "believe",
+          "trust",
+          "sweetest",
+          "favorite",
+          "giggles",
         ];
         const negativeWords = [
           "sad",
@@ -393,6 +614,11 @@
           "space",
           "wanting",
           "asking",
+          "fever",
+          "fire",
+          "ache",
+          "afraid",
+          "forgot",
         ];
 
         const words = text.toLowerCase().split(/\W+/);
@@ -405,7 +631,7 @@
         });
 
         const total = positiveCount + negativeCount;
-        if (total === 0) return { confidence: 0.5 }; // neutral
+        if (total === 0) return { confidence: 0.5 };
 
         const positiveRatio = positiveCount / total;
         return { confidence: positiveRatio };
@@ -482,7 +708,6 @@
           );
         }
 
-        // Add padding around the sentence
         const padding = 60;
         sentenceBounds.minX -= padding;
         sentenceBounds.maxX += padding;
@@ -499,44 +724,35 @@
           this.y = baseY;
           this.index = index;
 
-          // Very gentle movement parameters
           this.offsetX = 0;
           this.offsetY = 0;
           this.timeOffset = random(TWO_PI);
           this.speedMultiplier = random(0.8, 1.2);
 
-          // Colors based on current sentiment
           this.color1 = getColorFromSentiment();
           this.color2 = getColorFromSentiment();
-          // this.fontSize = random(28, 36);
           this.fontSize = 30;
           this.padding = 15;
 
-          // Calculate word dimensions
           textSize(this.fontSize);
           this.wordWidth = textWidth(this.word);
           this.wordHeight = this.fontSize;
 
-          // Shape dimensions with padding
           this.shapeWidth = this.wordWidth + this.padding * 2;
           this.shapeHeight = this.wordHeight + this.padding * 1.5;
 
-          // Gentle pulsing
           this.pulseOffset = random(TWO_PI);
-          this.rotation = random(-0.05, 0.05); // Very slight rotation
+          this.rotation = random(-0.05, 0.05);
         }
 
         update() {
-          // Very gentle floating motion - much smaller range
           this.timeOffset += 0.01 * this.speedMultiplier;
-          this.offsetX = sin(this.timeOffset) * 8; // Reduced from larger values
-          this.offsetY = cos(this.timeOffset * 1.3) * 6; // Reduced from larger values
+          this.offsetX = sin(this.timeOffset) * 8;
+          this.offsetY = cos(this.timeOffset * 1.3) * 6;
 
-          // Update position
           this.x = this.baseX + this.offsetX;
           this.y = this.baseY + this.offsetY;
 
-          // Gentle pulsing
           this.pulseOffset += 0.008;
         }
 
@@ -550,15 +766,13 @@
           translate(this.x, this.y);
           rotate(this.rotation);
 
-          // Create gradient with more white space in middle
           const gradientFill = drawingContext.createLinearGradient(
             -this.shapeWidth / 2,
-            0, // Start from left side
+            0,
             this.shapeWidth / 2,
-            0 // End at right side
+            0
           );
 
-          // Left side - very gradual fade of color1
           gradientFill.addColorStop(0, colorToRgba(this.color1, 0.4));
           gradientFill.addColorStop(0.05, colorToRgba(this.color1, 0.35));
           gradientFill.addColorStop(0.1, colorToRgba(this.color1, 0.28));
@@ -570,11 +784,9 @@
           gradientFill.addColorStop(0.4, colorToRgba(this.color1, 0.02));
           gradientFill.addColorStop(0.42, colorToRgba(this.color1, 0.01));
 
-          // Wide transparent middle zone
           gradientFill.addColorStop(0.45, "rgba(0,0,0,0)");
           gradientFill.addColorStop(0.55, "rgba(0,0,0,0)");
 
-          // Right side - very gradual fade of color2
           gradientFill.addColorStop(0.58, colorToRgba(this.color2, 0.01));
           gradientFill.addColorStop(0.6, colorToRgba(this.color2, 0.02));
           gradientFill.addColorStop(0.65, colorToRgba(this.color2, 0.05));
@@ -589,12 +801,10 @@
           drawingContext.fillStyle = gradientFill;
           noStroke();
 
-          // Gentle pulsing
           const pulseFactor = 1 + sin(this.pulseOffset) * 0.03;
           const currentWidth = this.shapeWidth * pulseFactor;
           const currentHeight = this.shapeHeight * pulseFactor;
 
-          // Draw rounded rectangle background with bigger radius for rounder shape
           rect(
             -currentWidth / 2,
             -currentHeight / 2,
@@ -603,8 +813,7 @@
             currentHeight / 2
           );
 
-          // Draw the word
-          fill(0, 0, 0, 180); // Semi-transparent black text
+          fill(0, 0, 0, 180);
           noStroke();
           textAlign(CENTER, CENTER);
           textSize(this.fontSize);
@@ -618,7 +827,6 @@
       function analyzeSentimentAndCreateSentence(sentenceText) {
         let result;
 
-        // Try ML5 sentiment analysis if available
         if (
           modelLoaded &&
           sentiment &&
@@ -634,13 +842,12 @@
               }
               processSentimentResult(result, sentenceText);
             });
-            return; // Exit early for async ML5 processing
+            return;
           } catch (error) {
             console.log("ML5 error, using fallback sentiment analysis:", error);
           }
         }
 
-        // Fallback to simple sentiment analysis
         result = simpleSentimentAnalysis(sentenceText);
         processSentimentResult(result, sentenceText);
       }
@@ -648,7 +855,6 @@
       function processSentimentResult(result, sentenceText) {
         currentSentiment = result;
 
-        // Determine color scheme based on sentiment
         if (result.confidence > 0.6) {
           currentColorScheme = "positive";
         } else if (result.confidence < 0.4) {
@@ -664,62 +870,52 @@
       function createSentence(sentenceText) {
         words = [];
         const sentenceWords = sentenceText.split(" ");
-        const maxWidth = width * 0.7; // 70% of window width
+        const maxWidth = width * 0.7;
 
-        // Calculate word widths and organize into lines
-        textSize(32); // Average font size for calculation
+        textSize(32);
         let lines = [];
         let currentLine = [];
         let currentLineWidth = 0;
 
         for (let word of sentenceWords) {
-          const wordWidth = textWidth(word) + 30 + 20; // word width + padding + spacing
+          const wordWidth = textWidth(word) + 30 + 20;
 
-          // Check if adding this word would exceed max width
           if (
             currentLineWidth + wordWidth > maxWidth &&
             currentLine.length > 0
           ) {
-            // Start a new line
             lines.push([...currentLine]);
             currentLine = [word];
             currentLineWidth = wordWidth;
           } else {
-            // Add word to current line
             currentLine.push(word);
             currentLineWidth += wordWidth;
           }
         }
 
-        // Don't forget the last line
         if (currentLine.length > 0) {
           lines.push(currentLine);
         }
 
-        // Calculate total height needed for all lines
-        const lineHeight = 60; // Space between lines
+        const lineHeight = 60;
         const totalHeight = lines.length * lineHeight;
         const startY = (height - totalHeight) / 2 + lineHeight / 2;
 
-        // Position words for each line
         for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
           const lineWords = lines[lineIndex];
 
-          // Calculate total width of current line
           let lineWidth = 0;
           for (let word of lineWords) {
             textSize(32);
-            lineWidth += textWidth(word) + 30 + 20; // word + padding + spacing
+            lineWidth += textWidth(word) + 30 + 20;
           }
-          lineWidth -= 20; // Remove last spacing
+          lineWidth -= 20;
 
-          // Center the line
           const lineStartX = (width - lineWidth) / 2;
           const lineY = startY + lineIndex * lineHeight;
 
           let currentX = lineStartX;
 
-          // Create word shapes for this line
           for (let word of lineWords) {
             textSize(32);
             const wordWidth = textWidth(word) + 30;
@@ -728,11 +924,10 @@
             const wordShape = new WordShape(word, wordX, lineY, words.length);
             words.push(wordShape);
 
-            currentX += wordWidth + 20; // Move to next word position
+            currentX += wordWidth + 20;
           }
         }
 
-        // Calculate bounds after creating words
         calculateSentenceBounds();
       }
 
@@ -751,7 +946,6 @@
         canvas = createCanvas(windowWidth, windowHeight);
         canvas.parent(document.body);
 
-        // Try to initialize sentiment analysis with error handling
         try {
           if (typeof ml5 !== "undefined" && ml5.sentiment) {
             sentiment = ml5.sentiment("movieReviews", () => {
@@ -770,21 +964,17 @@
           modelLoaded = false;
         }
 
-        // Create first sentence (will use fallback if ML5 not ready)
-        setTimeout(() => {
-          analyzeSentimentAndCreateSentence(poeticTexts[currentSentenceIndex]);
-        }, 100);
+        // Create first sentence immediately
+        analyzeSentimentAndCreateSentence(poeticTexts[currentSentenceIndex]);
       }
 
       function draw() {
         background(255);
 
-        // Check for mouse hover over words
         hoveredWord = null;
         for (let word of words) {
           word.update();
 
-          // Check if mouse is over this word
           const distance = dist(mouseX, mouseY, word.x, word.y);
           if (distance < max(word.shapeWidth, word.shapeHeight) / 2) {
             hoveredWord = word;
@@ -793,7 +983,6 @@
           word.display();
         }
 
-        // Show hormone info if hovering
         updateHormoneInfo();
       }
 
@@ -807,7 +996,6 @@
           hormoneNameSpan.textContent = fact.hormone;
           hormoneDescSpan.textContent = fact.description;
 
-          // Position and size the hormone info to cover the entire sentence
           const width = sentenceBounds.maxX - sentenceBounds.minX;
           const height = sentenceBounds.maxY - sentenceBounds.minY;
 
@@ -835,7 +1023,6 @@
 
       function windowResized() {
         resizeCanvas(windowWidth, windowHeight);
-        // Recreate current sentence with new dimensions
         if (words.length > 0) {
           createSentence(poeticTexts[currentSentenceIndex]);
         }
